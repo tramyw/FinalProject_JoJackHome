@@ -9,7 +9,7 @@ import Banner from "./components/Banner";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <Navbar /> */}
+    <Navbar />
     <Banner />
     <AdoptionInfoPage />
     <Profile />
