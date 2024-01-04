@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.content {
+  line-height: 35px;
+}
+
 .awaitinglist {
   display: flex;
   justify-content: center;

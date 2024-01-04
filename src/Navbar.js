@@ -8,9 +8,7 @@ import {
   Button,
   Menu,
   Container,
-  //Tooltip,
   MenuItem,
-  //Avatar,
 } from "@mui/material";
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
@@ -28,7 +26,6 @@ const objValues = pages.map((el) => Object.values(el));
 
 //console.log(pages);
 console.log(objValues);
-//const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -146,7 +143,13 @@ function Navbar() {
             祖積愛
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              marginLeft: "auto",
+            }}
+          >
             {pages.map((page) => (
               <Link
                 style={{ textDecoration: "none" }}
@@ -163,7 +166,20 @@ function Navbar() {
               </Link>
             ))}
           </Box>
-          <Stack direction="row" spacing={2}>
+
+          <Stack direction="row" mt={2} mb={2} ml={2} spacing={2}>
+            <Button variant="contained" color="warning">
+              報失動物
+            </Button>
+
+            <Button
+              variant="contained"
+              color="info"
+              href="https://forms.gle/HESZBGAgCoJqW2xp9"
+            >
+              登記待領動物
+            </Button>
+
             <Link
               to={{
                 pathname: "/Adoption_Info_Page",
@@ -175,36 +191,6 @@ function Navbar() {
               </Button>
             </Link>
           </Stack>
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Baby Shark" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-              </Box>*/}
         </Toolbar>
       </Container>
     </AppBar>
