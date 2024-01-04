@@ -5,7 +5,7 @@ export const Footer = () => {
     <Box
       sx={{
         width: "100%",
-        height: "200px",
+        height: "150px",
         backgroundColor: "primary.main",
         paddingTop: "1rem",
         paddingBottom: "1rem",

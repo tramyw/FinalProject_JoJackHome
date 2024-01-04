@@ -15,8 +15,19 @@ import {
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const pages = ["主頁", "關於我們", "領養"];
+const pages = [
+  { 主頁: "Home" },
+  { 關於我們: "About_us" },
+  { 領養: "Category_Page" },
+];
+
+const objKeys = pages.map((el) => Object.keys(el));
+const objValues = pages.map((el) => Object.values(el));
+
+//console.log(pages);
+console.log(objValues);
 //const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
@@ -45,23 +56,25 @@ function Navbar() {
           <HomeTwoToneIcon
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            祖積愛
-          </Typography>
+          <Link to={{ pathname: `/Home` }} style={{ textDecoration: "none" }}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              祖積愛
+            </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -93,8 +106,19 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={Object.values(page)}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    key={Object.values(page)}
+                    to={`/${Object.values(page)}`}
+                  >
+                    <Typography textAlign="center">
+                      {Object.keys(page)}
+                    </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -124,19 +148,32 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+              <Link
+                style={{ textDecoration: "none" }}
+                key={Object.values(page)}
+                to={`/${Object.values(page)}`}
               >
-                {page}
-              </Button>
+                <Button
+                  key={Object.values(page)}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {Object.keys(page)}
+                </Button>
+              </Link>
             ))}
           </Box>
           <Stack direction="row" spacing={2}>
-            <Button variant="outlined" color="inherit">
-              領養須知
-            </Button>
+            <Link
+              to={{
+                pathname: "/Adoption_Info_Page",
+              }}
+              rel="noopener noreferrer"
+            >
+              <Button variant="outlined" color="inherit">
+                領養須知
+              </Button>
+            </Link>
           </Stack>
 
           {/* <Box sx={{ flexGrow: 0 }}>
