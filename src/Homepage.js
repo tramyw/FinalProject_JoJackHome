@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer.js";
 import Shortcut from "./components/Shortcut.js";
+import StarPet from "./components/StarPet.js";
 
 import MapDisplay from "./components/MapDisplay.js";
 function Homepage() {
@@ -10,7 +11,8 @@ function Homepage() {
     <div>
       <Navbar />
       <Banner />
-      <Shortcut location="Homepage" />
+      <StarPet />
+      {/* <Shortcut location="Homepage" /> */}
       <MapDisplay />
       <Footer />
     </div>
