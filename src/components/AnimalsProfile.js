@@ -62,13 +62,6 @@ function AnimalsProfile() {
               <a href={`${animalInfo[0].href}`}>
                 <Button variant="contained">去了解我更多</Button>
               </a>
-              <Link
-                to={{
-                  pathname: `/Category_Page`,
-                }}
-              >
-                <Button variant="contained">返回上一頁</Button>
-              </Link>
             </Stack>
           </div>
           <div></div>
