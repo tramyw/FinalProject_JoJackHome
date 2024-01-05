@@ -4,10 +4,9 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { Button } from "@mui/material";
-import { Stack } from "@mui/system";
 import AnimalList from "./AnimalList.js";
 import Shortcut from "./Shortcut.js";
+import styles from "./FilterBar.module.css";
 
 function FilterBar() {
   let unfilteredInfo = [];
@@ -65,7 +64,7 @@ function FilterBar() {
   };
 
   return (
-    <>
+    <div className="categoryPage-container">
       <Shortcut
         selectedSpecies={selectedSpecies}
         setSelectedSpecies={setSelectedSpecies}
@@ -73,95 +72,105 @@ function FilterBar() {
         setFilteredList={setFilteredList}
         data={unfilteredInfo}
         location="CategoryPage"
+        handleFilterOnClick={handleFilterOnClick}
       />
-      <Stack
-        direction="row"
-        my={10}
-        justifyContent="center"
-        className="filterBar"
-        flexWrap="wrap"
-      >
-        <FormControl sx={{ minWidth: "220px" }}>
-          <InputLabel id="speciesFiltering">品種</InputLabel>
-          <Select
-            labelId="speciesFiltering"
-            id="chosenSpecies"
-            label="品種"
-            onChange={handleSpeciesChange}
-            value={selectedSpecies}
-          >
-            <MenuItem value="all">所有</MenuItem>
-            <MenuItem value="dog">狗狗</MenuItem>
-            <MenuItem value="cat">貓貓</MenuItem>
-          </Select>
-        </FormControl>
+      <div className={styles["filterBar-wrapper"]}>
+        <div className={styles["filterBar"]}>
+          <FormControl fullWidth>
+            <InputLabel id="speciesFiltering">品種</InputLabel>
+            <Select
+              labelId="speciesFiltering"
+              id="chosenSpecies"
+              label="品種"
+              onChange={handleSpeciesChange}
+              value={selectedSpecies}
+            >
+              <MenuItem value="all">所有</MenuItem>
+              <MenuItem value="dog">狗狗</MenuItem>
+              <MenuItem value="cat">貓貓</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
 
-        <FormControl sx={{ minWidth: "220px" }}>
-          <InputLabel id="genderFiltering">性別</InputLabel>
-          <Select
-            labelId="genderFiltering"
-            id="chosenGender"
-            label="性別"
-            onChange={handleGenderChange}
-            value={selectedGender}
-          >
-            <MenuItem value="all">所有</MenuItem>
-            <MenuItem value="女">女</MenuItem>
-            <MenuItem value="男">男</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl sx={{ minWidth: "220px" }}>
-          <InputLabel id="chipFiltering">晶片</InputLabel>
-          <Select
-            labelId="chipFiltering"
-            id="is_Chip"
-            label="晶片"
-            onChange={handleChipChange}
-            value={selectedChip}
-          >
-            <MenuItem value="all">所有</MenuItem>
-            <MenuItem value="未植入">未植入</MenuItem>
-            <MenuItem value="已植入">已植入</MenuItem>
-            <MenuItem value="/">Unknown</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl sx={{ minWidth: "220px" }}>
-          <InputLabel id="castratedFiltering">絕育</InputLabel>
-          <Select
-            labelId="castratedFiltering"
-            id="is_castrated"
-            label="絕育"
-            onChange={handleCastratedChange}
-            value={selectedCastrated}
-          >
-            <MenuItem value="all">所有</MenuItem>
-            <MenuItem value="未絕育">未絕育</MenuItem>
-            <MenuItem value="已絕育">已絕育</MenuItem>
-          </Select>
-        </FormControl>
-        <Stack direction="row">
-          <Button
-            variant="contained"
-            color="warning"
-            onClick={handleFilterOnClick}
-          >
-            Filter
-          </Button>
-          <Button
-            variant="outlined"
-            color="warning"
-            onClick={handleClearOnClick}
-          >
-            Clear All
-          </Button>
-        </Stack>
-      </Stack>
-      <Stack>
+        <div className={styles["filterBar"]}>
+          <FormControl fullWidth>
+            <InputLabel id="genderFiltering">性別</InputLabel>
+            <Select
+              labelId="genderFiltering"
+              id="chosenGender"
+              label="性別"
+              onChange={handleGenderChange}
+              value={selectedGender}
+            >
+              <MenuItem value="all">所有</MenuItem>
+              <MenuItem value="女">女</MenuItem>
+              <MenuItem value="男">男</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+        <div className={styles["filterBar"]}>
+          <FormControl fullWidth>
+            <InputLabel id="chipFiltering">晶片</InputLabel>
+            <Select
+              labelId="chipFiltering"
+              id="is_Chip"
+              label="晶片"
+              onChange={handleChipChange}
+              value={selectedChip}
+            >
+              <MenuItem value="all">所有</MenuItem>
+              <MenuItem value="未植入">未植入</MenuItem>
+              <MenuItem value="已植入">已植入</MenuItem>
+              <MenuItem value="/">Unknown</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+        <div className={styles["filterBar"]}>
+          <FormControl fullWidth>
+            <InputLabel id="castratedFiltering">絕育</InputLabel>
+            <Select
+              labelId="castratedFiltering"
+              id="is_castrated"
+              label="絕育"
+              onChange={handleCastratedChange}
+              value={selectedCastrated}
+            >
+              <MenuItem value="all">所有</MenuItem>
+              <MenuItem value="未絕育">未絕育</MenuItem>
+              <MenuItem value="已絕育">已絕育</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+        <div className={styles["filterClearButton-wrapper"]}>
+          <div className={styles["filterClearButton"]}>
+            <button
+              className={styles["filtering"]}
+              id="filterBtn"
+              onClick={handleFilterOnClick}
+            >
+              Filter
+            </button>
+          </div>
+          <div className={styles["filterClearButton"]}>
+            <button
+              className={styles["clearAll"]}
+              id="clearAllBtn"
+              onClick={handleClearOnClick}
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
         <AnimalList
           data={filteredList.length > 0 ? filteredList : unfilteredInfo}
         />
-      </Stack>
-    </>
+      </div>
+    </div>
   );
 }
 
