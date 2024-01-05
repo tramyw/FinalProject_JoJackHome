@@ -1,19 +1,28 @@
-import React, { useState } from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import styles from "./AnimalList.module.css";
 
 function AnimalList(props) {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemPerPage = 16;
+  const [itemPerPage, setItemPerPage] = useState(calculateItemsPerPage());
   const lastIndex = currentPage * itemPerPage;
   const firstIndex = lastIndex - itemPerPage;
   const items = props.data.slice(firstIndex, lastIndex);
-  const numberOfPages = Math.ceil(props.data.length / 16);
+  const numberOfPages = Math.ceil(props.data.length / itemPerPage);
   const pageNum = [...Array(numberOfPages + 1).keys()].slice(1);
 
-  console.log(props.data);
+  useEffect(() => {
+    function handleResize() {
+      setItemPerPage(calculateItemsPerPage());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  //console.log(props.data);
 
   function previousPage() {
     if (currentPage !== 1) {
@@ -31,46 +40,52 @@ function AnimalList(props) {
     }
   }
 
+  function calculateItemsPerPage() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1280) {
+      return 16; // Show 16 items per page for large screens
+    } else if (screenWidth >= 960) {
+      return 12; // Show 12 items per page for medium screens
+    } else {
+      return 8; // Show 8 items per page for small screens
+    }
+  }
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ImageList cols={4}>
+      <div className={styles["image-list-container"]}>
+        <div className={styles["image-list"]}>
           {items.map((el) => (
             <Link
+              key={el.name}
               to={{
                 pathname: `/Category_Page/${el.name}`,
-                state: { el },
               }}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              <ImageListItem key={el.name}>
-                <img
-                  srcSet={`${el.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${el.image}?w=248&fit=crop&auto=format`}
-                  alt={el.name}
-                  loading="lazy"
-                  style={{
-                    borderRadius: "10px",
-                    overflow: "hidden",
-                    width: "280px",
-                    height: "280px",
-                  }}
-                />
-                <ImageListItemBar
-                  title={el.name}
-                  subtitle={
-                    <span>
+              <div className={styles["listItem"]}>
+                <div className={styles["image-container"]}>
+                  <img
+                    src={`${el.image}?w=248&fit=crop&auto=format`}
+                    alt={el.name}
+                    loading="lazy"
+                    className={styles["bio-image"]}
+                  />
+                </div>
+
+                <div className={styles["image-details"]}>
+                  <div className={styles["bio-details-wrapper"]}>
+                    <h3 className={styles["bioName"]}>{el.name}</h3>
+                    <span className={styles["bio-gender-age"]}>
                       {el.gender} {el.age}
                     </span>
-                  }
-                  position="below"
-                  style={{ textAlign: "center" }}
-                />
-              </ImageListItem>
+                  </div>
+                </div>
+              </div>
             </Link>
           ))}
-        </ImageList>
+        </div>
       </div>
 
       <nav>
