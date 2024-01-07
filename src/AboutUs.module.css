@@ -118,7 +118,6 @@
     justify-content: center;
   }
   .allLogos {
-    width: 70%;
     flex-wrap: wrap;
   }
 }
@@ -142,7 +141,6 @@
     justify-content: center;
   }
   .allLogos {
-    width: 50%;
     flex-wrap: wrap;
   }
 }
