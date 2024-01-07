@@ -1,0 +1,148 @@
+.title-About-Us {
+  text-align: center;
+}
+
+.about-us {
+  text-align: center;
+}
+
+.about-us-photo-1 {
+  width: 300px;
+  height: 500px;
+}
+
+.about-us-1 {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.about-us-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-photo-2 {
+  width: 400px;
+  height: 500px;
+}
+
+.about-us-para-1 {
+  display: flex;
+  align-items: center;
+}
+.about-us-para-2 {
+  display: flex;
+  align-items: center;
+}
+
+.para {
+  display: flex;
+  flex-direction: column;
+}
+.para-title {
+  color: #a94a52;
+}
+
+.para-content {
+  color: #6e6e6e;
+  max-width: 500px;
+}
+
+.logocontainer {
+  background-color: #ffaec9;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.allLogos {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contactUs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact-Title {
+  color: #17383d;
+}
+.contact-Image {
+  height: 300px;
+}
+.contact-Info {
+  color: #a94a52;
+}
+.contact-Details {
+  font-weight: 800;
+}
+
+@media (min-width: 1280px) {
+  .about-us-1 {
+    flex-direction: row;
+  }
+  .about-us-2 {
+    flex-direction: row;
+  }
+  .about-us-para-1 {
+    margin-left: 20px;
+  }
+  .about-us-para-2 {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .about-us-1 {
+    flex-direction: column;
+  }
+  .about-us-2 {
+    flex-direction: column;
+  }
+  .about-us-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+  .about-us-para-2 {
+    justify-content: center;
+  }
+  .about-us-para-1 {
+    justify-content: center;
+  }
+  .allLogos {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 959px) {
+  .about-us-1 {
+    flex-direction: column;
+  }
+  .about-us-2 {
+    flex-direction: column;
+  }
+  .about-us-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+  .about-us-para-2 {
+    justify-content: center;
+  }
+  .about-us-para-1 {
+    justify-content: center;
+  }
+  .allLogos {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+}
