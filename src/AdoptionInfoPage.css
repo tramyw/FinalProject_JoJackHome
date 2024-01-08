@@ -13,7 +13,17 @@
   line-height: 35px;
 }
 
-.awaitinglist {
+li {
+  list-style-type: none;
+  padding-left: 30px;
+  background-image: url("../public/beforeadoptImgs/paw.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center left 5px;
+  display: inline-block;
+}
+
+.awaitinglistbtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,4 +41,14 @@
 .logo {
   max-width: 100%;
   height: 80px;
+}
+
+@media only screen and (max-width: 420px) {
+  .logocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
