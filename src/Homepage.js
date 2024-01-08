@@ -15,7 +15,7 @@ function Homepage() {
       <Navbar />
       <Banner />
       <StarPet />
-      <Catcursor />
+      {/*<Catcursor />*/}
       {/* <Shortcut location="Homepage" /> */}
       <MapDisplay />
       <Footer />
