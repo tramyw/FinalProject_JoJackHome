@@ -9,7 +9,7 @@ import AdoptionInfoPage from "./AdoptionInfoPage.js";
 import CategoryPage from "./CategoryPage.js";
 import AnimalsProfile from "./components/AnimalsProfile.js";
 import AboutUs from "./AboutUs.js";
-import Catcursor from "./catcursor.js";
+//import Catcursor from "./catcursor.js";
 //import Dogcursor from "./dogcursor.js";
 //import Jojaccursor from "./jojaccursor.js";
 

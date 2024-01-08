@@ -2,7 +2,7 @@ import React from "react";
 import "./AdoptionInfoPage.css";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import Navbar from "./Navbar";
+import Navbar from "./NewNavbar/AliceNavbar.js";
 import ErrorTwoToneIcon from "@mui/icons-material/ErrorTwoTone";
 import { Link } from "react-router-dom";
 import Footer from "./components/Footer.js";

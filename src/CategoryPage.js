@@ -1,5 +1,5 @@
 import FilterBar from "./components/FilterBar.js";
-import Navbar from "./Navbar.js";
+import Navbar from "./NewNavbar/AliceNavbar.js";
 import Footer from "./components/Footer.js";
 
 function CategoryPage() {
@@ -7,7 +7,7 @@ function CategoryPage() {
     <>
       <Navbar />
       <FilterBar />
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }

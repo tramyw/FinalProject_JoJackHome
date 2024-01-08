@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./NewNavbar/AliceNavbar.js";
 import Footer from "./components/Footer";
 import "./AdoptionInfoPage.css";
 import styles from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
-    <div className={styles["container"]}>
+    <div className="container">
       <Navbar />
 
       <div className={styles["middle-content"]}>

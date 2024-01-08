@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./NewNavbar/AliceNavbar.js";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer.js";
 import Shortcut from "./components/Shortcut.js";
 import StarPet from "./components/StarPet.js";
-import Catcursor from "./catcursor.js";
+//import Catcursor from "./catcursor.js";
 //import Dogcursor from "./dogcursor.js";
 //import Jojaccursor from "./jojaccursor.js";
 
@@ -15,7 +15,7 @@ function Homepage() {
       <Navbar />
       <Banner />
       <StarPet />
-      {/*<Catcursor />*/}
+      {/* <Catcursor /> */}
       {/* <Shortcut location="Homepage" /> */}
       <MapDisplay />
       <Footer />

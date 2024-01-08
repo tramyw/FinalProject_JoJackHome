@@ -4,7 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import iconUrl from "../arrow.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
-import { Button } from "@mui/material";
+import styles from "./MapDisplay.module.css";
 
 const customIcon = L.icon({
   iconUrl,
@@ -79,31 +79,34 @@ function MapDisplay() {
     species,
   }) {
     return (
-      <div>
-        <img src={src} alt="dog" style={{ width: "150px" }} />
-        <h3>
-          {name}, {age}, {species}
-        </h3>
-        <h4>
-          {" "}
-          {characteristics}
-          <span>{lost_location}</span>
-        </h4>
+      <div className={styles["content-area"]}>
+        <img className={styles["image"]} src={src} alt="dog" />
+        <div className={styles["basic-info"]}>
+          <div className={styles["name"]}>{name}</div>
+          <div className={styles["age-and-species"]}>
+            {age}, {species}
+          </div>
+        </div>
+        <div className={styles["details-info"]}>
+          <div className={styles["characteristics"]}>
+            <div className={styles["sub-title"]}>特徵：</div>
+            {characteristics}
+          </div>
+          <div className={styles["lost_location"]}>
+            <div className={styles["sub-title"]}>走失資訊：</div>
+            {lost_location}
+          </div>
+        </div>
 
-        <p>{`Call me : ${phone}`}</p>
+        <div className={styles["contact-owner"]}>{`聯絡失主：${phone}`}</div>
       </div>
     );
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <div>
       <MapContainer
-        style={{ width: "700px", height: "500px" }}
+        className={styles["map"]}
         center={[22.37071382920351, 114.121470451355]}
         zoom={15}
         scrollWheelZoom={false}
@@ -125,10 +128,6 @@ function MapDisplay() {
           </Marker>
         ))}
       </MapContainer>
-      <div>
-        <h1 style={{ alignSelf: "center" }}>有狗狗貓貓走失咗? 搵禾地報料 ⬇️</h1>
-        <Button>報料熱線</Button>
-      </div>
     </div>
   );
 }
