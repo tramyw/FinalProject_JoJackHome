@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageG from "./ImageGallery";
+import "../Profile.css";
 
 function AnimalsProfile() {
   let { animal_Name } = useParams();
@@ -18,7 +19,7 @@ function AnimalsProfile() {
     <div>
       <div className="containerA">
         <Navbar />
-        <Stack direction="row" justifyContent="space-evenly" spacing={3}>
+        <Stack className="content">
           <div>
             <ImageG data={animalInfo} />
           </div>
