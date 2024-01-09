@@ -3,6 +3,7 @@ import Navbar from "./NewNavbar/AliceNavbar.js";
 import Footer from "./components/Footer";
 import "./AdoptionInfoPage.css";
 import styles from "./AboutUs.module.css";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
@@ -10,33 +11,45 @@ const AboutUs = () => {
       <Navbar />
 
       <div className={styles["middle-content"]}>
-        <div className="title">
-          <h2 className={styles["title-About-Us"]}>關於我們</h2>
-        </div>
-        <div className={styles["about-us-1"]}>
-          <div className={styles["about-us-photo-wrapper"]}>
-            <img
-              className={styles["about-us-photo-1"]}
-              src="https://images.unsplash.com/photo-1551730459-92db2a308d6a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="About Us"
-            />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          style={{ minHeight: "100vh" }}
+        >
+          <div className="title">
+            <h2 className={styles["title-About-Us"]}>關於我們</h2>
           </div>
-          <div className={styles["about-us-para-1"]}>
-            <div className={styles["para"]}>
-              <div className={styles["para-title"]}>
-                <span>歡迎來到祖積家， 這是領養寵物的最佳目的地！</span>
-              </div>
-              <div className={styles["para-content"]}>
-                祖積家是一個革命性的網路平臺，匯集來多個香港動物協會及組織的待領養寵物資訊，您只需要訪問祖積家就找到能完美的毛茸茸的寵物伴侶。
-              </div>
-              <br></br>
-              <div className={styles["para-content"]}>
-                我們是一群熱愛動物的人，我們希望能幫助流浪動物找到一個溫暖的家。我們的網站提供了各種寵物的資訊，包括品種、性格、健康狀況等，讓你可以根據自己的喜好和條件選擇最適合你的寵物。我們也提供了領養流程和注意事項，讓你可以順利地完成領養手續，並且給予你的新朋友最好的照顧。
+          <div className={styles["about-us-1"]}>
+            <div className={styles["about-us-photo-wrapper"]}>
+              <img
+                className={styles["about-us-photo-1"]}
+                src="https://images.unsplash.com/photo-1551730459-92db2a308d6a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="About Us"
+              />
+            </div>
+            <div className={styles["about-us-para-1"]}>
+              <div className={styles["para"]}>
+                <div className={styles["para-title"]}>
+                  <span>歡迎來到祖積家， 這是領養寵物的最佳目的地！</span>
+                </div>
+                <div className={styles["para-content"]}>
+                  祖積家是一個革命性的網路平臺，匯集來多個香港動物協會及組織的待領養寵物資訊，您只需要訪問祖積家就找到能完美的毛茸茸的寵物伴侶。
+                </div>
+                <br></br>
+                <div className={styles["para-content"]}>
+                  我們是一群熱愛動物的人，我們希望能幫助流浪動物找到一個溫暖的家。我們的網站提供了各種寵物的資訊，包括品種、性格、健康狀況等，讓你可以根據自己的喜好和條件選擇最適合你的寵物。我們也提供了領養流程和注意事項，讓你可以順利地完成領養手續，並且給予你的新朋友最好的照顧。
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          style={{ minHeight: "100vh" }}
+        >
           <div className={styles["about-us-2"]}>
             <div className={styles["about-us-para-2"]}>
               <div className={styles["para"]}>
@@ -58,9 +71,15 @@ const AboutUs = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className={styles["logocontainer"]}>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className={styles["logocontainer"]}
+      >
         <div className={styles["allLogos"]}>
           <a
             href="https://hkscda.com/adoption/instructions"
@@ -101,8 +120,13 @@ const AboutUs = () => {
             <img src="./icons/SAA_logo.jpeg" className="logo" alt="SAA" />
           </a>
         </div>
-      </div>
-      <div className={styles["contactUs-wrapper"]}>
+      </motion.div>
+      <motion.div
+        className={styles["contactUs-wrapper"]}
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <div>
           <h2 className={styles["contact-Title"]}>聯絡我們</h2>
         </div>
@@ -130,7 +154,8 @@ const AboutUs = () => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
+
       <Footer />
     </div>
   );
