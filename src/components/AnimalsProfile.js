@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import ImageG from "./ImageGallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../Profile.css";
+import { motion } from "framer-motion";
 
 function AnimalsProfile() {
   let { animal_Name } = useParams();
@@ -17,15 +18,17 @@ function AnimalsProfile() {
   return (
     <div>
       <Navbar />
+      <br></br>
+      <br></br>
       <div className="content">
         <ImageG data={animalInfo} />
-        <div>
+        <motion.div animate={{ y: 50 }} transition={{ duration: 0.4 }}>
           <h1>{animalInfo[0].name}</h1>
-          <p>
+          <h4>
             我係{animalInfo[0].gender}仔 {animalInfo[0].specis}, 我的歲數是{" "}
             {animalInfo[0].age}
-          </p>
-          <p>
+          </h4>
+          <h4>
             我現時
             {
               <em>
@@ -37,27 +40,39 @@ function AnimalsProfile() {
               <span className="underline">{animalInfo[0].castrated}</span>
             </em>
             ~
-          </p>
-          <br></br>
+          </h4>
           <br></br>
           <p>
             性別: {animalInfo[0].gender}({animalInfo[0].castrated})
           </p>
           <p>歲數: {animalInfo[0].age}</p>
           <p>晶片: {animalInfo[0].chipped}</p>
+
           <br></br>
-          <br></br>
-          <div>
-            <p>狗狗準備好返屋企，你準備好未?</p>
-            <h3>領養前，停一停，諗一諗</h3>
-          </div>
-          <Stack spacing={2}>
-            <a href={`${animalInfo[0].href}`}>
-              <Button variant="contained">去了解我更多</Button>
-            </a>
-          </Stack>
-        </div>
+        </motion.div>
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 1.5 }}
+        className="adoptionButton"
+      >
+        <p>狗狗準備好返屋企，你準備好未?</p>
+        <h3>領養前，停一停，諗一諗</h3>
+        <Stack spacing={2}>
+          <a href={`${animalInfo[0].href}`}>
+            <Button variant="contained">去了解我更多</Button>
+          </a>
+        </Stack>
+      </motion.div>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>
