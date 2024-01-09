@@ -3,9 +3,21 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.underline {
+  text-decoration: underline;
+}
+
+.App {
+  max-width: 40%;
+}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .content {
     width: 100%;
     flex-direction: column;
+  }
+  .App {
+    max-width: 90%;
   }
 }
