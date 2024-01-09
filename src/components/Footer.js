@@ -45,9 +45,7 @@ export const Footer = () => {
             </a>
             <br></br>
             <Typography color="textSecondary" variant="subtitle1">
-              {`Copyright© ${new Date().getFullYear()} 祖積家愛心無限公司 |`}{" "}
-              <a href="https://www.spca.org.hk/zh-hant/">SPCA Demo Link</a>
-              {` |`} This is a Link {`|`} This is a Link
+              {`Copyright© ${new Date().getFullYear()} 祖積家愛心無限公司 |`}
             </Typography>
           </Grid>
         </Grid>
