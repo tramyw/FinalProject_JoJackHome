@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import HKSCDA_info from "../HKSCDA_animal_info.json";
 import { Button, Stack } from "@mui/material";
-import Navbar from "../Navbar";
+import NewNavbar from "../NewNavbar";
 import Footer from "./Footer";
 import ImageG from "./ImageGallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -17,7 +17,7 @@ function AnimalsProfile() {
   let animalInfo = unfilteredInfo.filter((el) => el.name === animal_Name);
   return (
     <div>
-      <Navbar />
+      <NewNavbar />
       <br></br>
       <br></br>
       <div className="content">

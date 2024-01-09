@@ -7,12 +7,13 @@ import {
   Button,
   Tabs,
   Tab,
+  Box,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
-import Drawercomp from "./Drawer.js";
+import Drawercomp from "./Drawer_NewNavBar.js";
 import { Link } from "react-router-dom";
+import Logo from "./jojachomelogo.png";
 
 const pages = [
   { 主頁: "Home" },
@@ -29,10 +30,25 @@ function Navbar() {
   const responsive = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static" sx={{ background: "#063970" }}>
+    <AppBar position="static" sx={{ background: "#f9dc5c" }}>
       <Toolbar>
         <Link to={{ pathname: `/Home` }} style={{ textDecoration: "none" }}>
-          <HomeTwoToneIcon sx={{ display: { md: "flex" }, mr: 1 }} />
+          <Box
+            mt={2}
+            mb={2}
+            m1={2}
+            component="img"
+            sx={{
+              height: 45,
+              display: "flex",
+              justifyContent: "centre",
+              alignItems: "center",
+              marginRight: "12px",
+            }}
+            alt="JoJacHomeLogo"
+            src={Logo}
+            className="JoJacHomeLogo"
+          />
         </Link>
         <Link to={{ pathname: `/Home` }} style={{ textDecoration: "none" }}>
           <Typography
@@ -45,7 +61,7 @@ function Navbar() {
               display: { md: "flex" },
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "#E8B338",
+              color: "#584D3D",
               textDecoration: "none",
             }}
           >
@@ -59,25 +75,26 @@ function Navbar() {
           </>
         ) : (
           <>
-            <Tabs
-              sx={{ marginLeft: "auto" }}
-              textColor="inherit"
-              value={value}
-              onChange={(e, value) => setValue(value)}
-              indicatorColor="#508FF7"
-            >
+            <Tabs sx={{ marginLeft: "auto" }}>
               {pages.map((page, index) => (
                 <Link
                   style={{ textDecoration: "none" }}
                   key={Object.values(page)}
                   to={`/${Object.values(page)}`}
                 >
-                  <Tab key={index} label={Object.keys(page)} />
+                  <Tab
+                    key={index}
+                    label={Object.keys(page)}
+                    sx={{
+                      color: "#584D3D",
+                      fontWeight: 600,
+                    }}
+                  />
                 </Link>
               ))}
             </Tabs>
 
-            <Stack direction="row" mt={2} mb={2} ml={2} spacing={2}>
+            <Stack direction="row" mt={2} mb={2} ml={2} spacing={3}>
               <Link
                 to={{
                   pathname: "/Adoption_Info_Page",
@@ -87,8 +104,11 @@ function Navbar() {
                 <Button
                   sx={{
                     marginLeft: "auto",
-                    color: "#063970",
+                    color: "#2364AA",
                     background: "#9ED3F8",
+                    "&:hover": {
+                      background: "#EFEBCE",
+                    },
                   }}
                   variant="contained"
                 >
@@ -97,9 +117,12 @@ function Navbar() {
               </Link>
               <Button
                 sx={{
-                  marginLeft: "10px",
-                  color: "#063970",
+                  marginLeft: "20px",
+                  color: "#2364AA",
                   background: "#9ED3F8",
+                  "&:hover": {
+                    background: "#EFEBCE",
+                  },
                 }}
                 variant="contained"
                 href="https://forms.gle/HESZBGAgCoJqW2xp9"
@@ -108,9 +131,12 @@ function Navbar() {
               </Button>
               <Button
                 sx={{
-                  marginLeft: "10px",
-                  color: "#063970",
+                  marginLeft: "20px",
+                  color: "#2364AA",
                   background: "#9ED3F8",
+                  "&:hover": {
+                    background: "#EFEBCE",
+                  },
                 }}
                 variant="contained"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScomQJmP_29GITVpcB5ipMJGoQhDMGBElZc-WtsRhrLRC2tbw/viewform?usp=sharing"

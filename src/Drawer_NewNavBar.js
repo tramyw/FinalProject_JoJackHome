@@ -30,7 +30,7 @@ const Drawercomp = () => {
   return (
     <React.Fragment>
       <Drawer open={openDrawer} onClose={() => setopenDrawer(false)}>
-        <List>
+        <List sx={{ width: 130, margin: "5px" }}>
           {pages.map((page, index) => (
             <ListItemButton onClick={() => setopenDrawer(false)} key={index}>
               <ListItemIcon>
@@ -46,17 +46,19 @@ const Drawercomp = () => {
               </ListItemIcon>
             </ListItemButton>
           ))}
-
           {navButton.map((navbtn, index) => (
-            <List>
+            <ListItemButton onClick={() => setopenDrawer(false)} key={index}>
               <ListItemIcon>
-                <a href={`${Object.values(navbtn)}`}>
+                <a
+                  href={`${Object.values(navbtn)}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <ListItemText sx={{ color: "#508FF7" }}>
                     {Object.keys(navbtn)}
                   </ListItemText>
                 </a>
               </ListItemIcon>
-            </List>
+            </ListItemButton>
           ))}
         </List>
       </Drawer>

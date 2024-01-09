@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import NewNavbar from "./NewNavbar";
 import Footer from "./components/Footer";
 import MapDisplay from "./components/MapDisplay";
 import MapButtons from "./components/MapButtons";
@@ -7,7 +7,7 @@ import MapButtons from "./components/MapButtons";
 const LostAndFound = () => {
   return (
     <div>
-      <Navbar />
+      <NewNavbar />
       <MapButtons />
       <MapDisplay />
       <Footer />

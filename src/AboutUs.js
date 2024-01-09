@@ -1,14 +1,13 @@
 import React from "react";
-import Navbar from "./NewNavbar/AliceNavbar.js";
+import NewNavbar from "./NewNavbar";
 import Footer from "./components/Footer";
-import "./AdoptionInfoPage.css";
 import styles from "./AboutUs.module.css";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
     <div className="container">
-      <Navbar />
+      <NewNavbar />
 
       <div className={styles["middle-content"]}>
         <motion.div

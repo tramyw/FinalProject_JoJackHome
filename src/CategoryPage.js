@@ -1,11 +1,11 @@
 import FilterBar from "./components/FilterBar.js";
-import Navbar from "./NewNavbar/AliceNavbar.js";
+import NewNavbar from "./NewNavbar.js";
 import Footer from "./components/Footer.js";
 
 function CategoryPage() {
   return (
     <>
-      <Navbar />
+      <NewNavbar />
       <FilterBar />
       {/*<Footer />*/}
     </>

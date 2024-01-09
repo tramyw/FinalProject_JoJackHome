@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./NewNavbar/AliceNavbar.js";
+import NewNavbar from "./NewNavbar.js";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer.js";
 import Shortcut from "./components/Shortcut.js";
@@ -13,7 +13,7 @@ import MapDisplay from "./components/MapDisplay.js";
 function Homepage() {
   return (
     <div>
-      <Navbar />
+      <NewNavbar />
       <StarPet />
       {/*<Banner />*/}
 

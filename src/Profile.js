@@ -1,6 +1,6 @@
 import React from "react";
 import "./Profile.css";
-import Navbar from "./Navbar";
+import NewNavbar from "./NewNavbar";
 import ImageGallery from "./components/ImageGallery";
 import Footer from "./components/Footer";
 
@@ -941,7 +941,7 @@ const Profile = (Props) => {
   ];
   return (
     <div className="containerA">
-      <Navbar />
+      <NewNavbar />;
       <Stack direction="row" justifyContent="space-evenly" spacing={3}>
         <div>
           <h1>{Props.名字}</h1>
