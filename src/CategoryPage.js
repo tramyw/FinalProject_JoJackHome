@@ -7,7 +7,7 @@ function CategoryPage() {
     <>
       <NewNavbar />
       <FilterBar />
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 }
