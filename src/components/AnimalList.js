@@ -79,55 +79,65 @@ function AnimalList(props) {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <motion.div
-                className={styles["listItem"]}
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true, amount: 0.8 }}
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
-                }}
-                whileTap={{ scale: 1 }}
-              >
+              <div className={styles["image-wrapper"]}>
                 <motion.div
-                  className={styles["image-container"]}
-                  variants={cardVariants}
+                  animate={{ y: [-50, -80, -70] }}
+                  transition={{ ease: "easeOut", duration: 2 }}
                 >
-                  <img
-                    src={`${el.image}?w=248&fit=crop&auto=format`}
-                    alt={el.name}
-                    className={styles["bio-image"]}
-                  />
-                </motion.div>
+                  <motion.button
+                    className={styles["motion-button"]}
+                    variants={cardVariants}
+                    initial={{ opacity: 0.6 }}
+                    whileHover={{
+                      // y: 0,
+                      scale: 1.1,
 
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    whileInView={{ opacity: 1 }}
+                  >
+                    <img
+                      src={`${el.image}?w=248&fit=crop&auto=format`}
+                      alt={el.name}
+                      className={styles["bio-image"]}
+                    ></img>
+                  </motion.button>
+                </motion.div>
                 <div className={styles["image-details"]}>
-                  <div className={styles["bio-details-wrapper"]}>
-                    <h3 className={styles["bioName"]}>
-                      {el.name}
-                      <h5 className={styles["bio-gender-age"]}>
+                  <img
+                    className={styles["paper-box"]}
+                    src="./Imgs/paperBox.svg"
+                    alt="paper box"
+                  ></img>
+                  <div className={styles["pet-info"]}>
+                    {/* Name, gender and age */}
+                    <div className={styles["bioName"]}>{el.name}</div>
+                    <div className={styles["more-details"]}>
+                      <div className={styles["bio-gender-age"]}>
                         {el.gender === "女" ? (
                           <img
-                            className={styles["gender-Icon"]}
-                            src="https://em-content.zobj.net/source/microsoft/379/female-sign_2640-fe0f.png"
+                            className={styles["gender-icon"]}
+                            src="./icons/female.svg"
+                            alt="female"
                           ></img>
                         ) : (
                           <img
-                            className={styles["gender-Icon"]}
-                            src="https://em-content.zobj.net/source/microsoft/379/male-sign_2642-fe0f.png"
+                            className={styles["gender-icon"]}
+                            src="./icons/male.svg"
+                            alt="male"
                           ></img>
                         )}
                         {el.age}
-                      </h5>
-                    </h3>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </Link>
           ))}
         </div>
       </div>
-
       <nav>
         <ul
           className="pagination"

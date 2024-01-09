@@ -1,95 +1,88 @@
-.image-list-container {
-  /* display: flex;
-  justify-content: center; */
-  /* margin: 20px; */
-}
-
 .image-list {
-  /* display: grid;
-  grid-gap: 16px; */
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px 60px;
 }
 
-.listItem {
-  width: 100%;
-  /* height: 500px; */
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  justify-items: center;
-}
-
-.image-container {
-  height: 300px;
-  width: 300px;
-  /* position: relative; */
-  z-index: -1;
-}
-
-.bio-details-wrapper {
-  background-image: url("../../public/Imgs/paperBox.svg");
-  background-size: 310px;
-  background-repeat: no-repeat;
-  /*filter: drop-shadow(0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.5));*/
-  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.3));
-  width: 300px;
-  height: 300px;
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: center;
+  /* width: fit-content; */
+  padding: 30px;
+  height: 290px;
 }
 
 .bio-image {
   width: 210px;
-  height: 290px;
-  border-radius: 10px;
+  max-height: 290px;
   object-fit: cover;
+  border-radius: 30px;
   filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.3));
+  position: relative;
 }
 
 .image-details {
-  /*  padding: 16px;
- background: linear-gradient(to left, rgb(207, 166, 5), rgb(248, 230, 32));
-  background-color: rgb(255, 128, 82, 0.25);*/
-}
-
-.gender-Icon {
-  width: 18px;
-  align-self: center;
-}
-
-.image-details .bioName {
-  margin: 0;
-  font-size: 20px;
-  color: wheat;
-  transform: translate(-27px, 150px);
-}
-
-.image-details .bio-gender-age {
-  font-size: 15px;
-  color: wheat;
-  transform: translate(-1px, -27px);
+  /* border: 1px solid brown; */
+  position: absolute;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+
+  /* bottom: 0; */
+  /* bottom: 20%; */
+  /* width: fit-content; */
+  /* height: fit-content; */
+  /* padding: 3px; */
 }
 
-/* @media (min-width: 1280px) {
-  .image-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.paper-box {
+  /* position: relative; */
+  width: 300px;
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.3));
+  /* bottom: 20%; */
 }
 
-@media (min-width: 960px) and (max-width: 1279px) {
-  .image-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.pet-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 0 50px 0 0;
 }
 
-@media (max-width: 959px) {
-  .image-list {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .image-list-container {
-    margin: 40px;
-  }
-} */
+.bioName {
+  /* position: absolute; */
+  color: rgb(70, 30, 10);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.more-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bio-gender-age {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: rgb(155, 60, 25);
+}
+.gender-icon {
+  width: 20px;
+}
+/* motion style */
+
+.motion-button {
+  border: none;
+  background-color: unset;
+}
