@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 60px;
 }
 /* Drop-down Buttons */
 .drop-down-wrapper {
