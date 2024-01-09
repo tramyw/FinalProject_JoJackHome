@@ -1,12 +1,47 @@
 .filterBar-wrapper {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin: 20px;
+  gap: 20px; */
+  /* margin: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+/* Drop-down Buttons */
+.drop-down-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.selection {
+  color: rgb(70, 30, 10);
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 150px;
+}
+.option {
+  color: rgb(70, 30, 10);
+  font-size: 1rem;
+  /* font-weight: 600; */
 }
 
+/* Buttons */
 .filterClearButton-wrapper {
   display: flex;
-  min-height: 40px;
+  align-items: stretch;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+  /* min-height: 40px; */
 }
 
 .filterClearButton {
@@ -17,39 +52,62 @@
 }
 
 .filtering {
-  min-width: 95%;
+  /* min-width: 95%;
   min-height: 80%;
   border-radius: 5px;
   color: white;
   background-color: rgb(255, 128, 82);
-  border: 2px solid rgb(255, 128, 82);
+  border: 2px solid rgb(255, 128, 82); */
+  border: 5px dotted rgb(250, 220, 180);
+  background-color: #f9a24bcb;
+  width: max-content;
+  min-width: 150px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(70, 30, 10);
 }
 
 .clearAll {
-  min-width: 95%;
+  /* min-width: 95%;
   min-height: 80%;
   border-radius: 5px;
   background-color: white;
   color: rgb(255, 128, 82);
-  border: 2px solid rgb(255, 128, 82);
+  border: 2px solid rgb(255, 128, 82); */
+  border: 5px dotted rgb(250, 220, 180);
+  background-color: #fff;
+  width: max-content;
+  min-width: 150px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(70, 30, 10);
 }
 
 .filtering:hover {
-  background-color: white;
-  color: rgb(255, 128, 82);
+  /* background-color: white;
+  color: rgb(255, 128, 82); */
+  background-color: rgb(255, 224, 100);
+  /* color: white; */
+  border: 5px dotted #fff;
 }
 .clearAll:hover {
   background-color: rgb(255, 128, 82);
   color: white;
+  border: 5px dotted #fff;
 }
 
+/* 
 @media (min-width: 1280px) {
   .filterBar-wrapper {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
-@media (min-width: 960px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1000px) {
   .filterBar-wrapper {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 70px;
@@ -65,9 +123,9 @@
   .clearAll {
     justify-self: flex-start;
   }
-}
+} */
 
-@media (max-width: 959px) {
+/* @media (max-width: 959px) {
   .filterBar-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -83,4 +141,4 @@
     min-width: 100%;
     min-height: 100%;
   }
-}
+} */
