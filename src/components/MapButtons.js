@@ -23,9 +23,9 @@ const MapButtons = () => {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <IconButton id="found-pet">
+              <IconButton id={styles["found-pet"]}>
                 <SvgIcon
-                  id="icon"
+                  id={styles["icon"]}
                   height="512pt"
                   viewBox="0 0 512 512.00042"
                   width="512pt"
@@ -77,9 +77,9 @@ const MapButtons = () => {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <IconButton id="lost-pet">
+              <IconButton id={styles["lost-pet"]}>
                 <SvgIcon
-                  id="icon"
+                  id={styles["icon"]}
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
                   y="0px"

@@ -1,73 +1,35 @@
 import React from "react";
 import HKSCDA_info from "../HKSCDA_animal_info.json";
-import { Link as ReactLink } from "react-router-dom";
+import styles from "./Shortcut.module.css";
 
 function Shortcut(props) {
-  /*const shortCutSpecies = (input) => {
-    props.setSelectedSpecies(input);
-  };*/
-
   return (
-    <div>
-      {props.location === "Homepage" ? (
-        <ReactLink
-          to={{
-            pathname: `/Category_Page`,
-          }}
-        >
-          <div className="shortCut-outbox">
-            <div className="shortCutButton-wrapper">
-              <div className="shortCut-img">
-                <img src="./icons/dog_icon.png" width="50px" alt="doggie"></img>
-              </div>
-              <div className="shortCut-text">
-                {`待領養狗狗: ${HKSCDA_info.HKSCDA_dog.length}`}
-              </div>
-            </div>
-          </div>
-        </ReactLink>
-      ) : (
-        <div className="shortCut-outbox">
-          <div className="shortCutButton-wrapper">
-            <div className="shortCut-img">
-              <img src="./icons/dog_icon.png" width="50px" alt="doggie"></img>
-            </div>
-            <div className="shortCut-text">
-              {`待領養狗狗: ${HKSCDA_info.HKSCDA_dog.length}`}
-            </div>
+    <div className={styles["count-container"]}>
+      <div className={styles["title"]}>本目本站收錄到嘅往領養主子數目：</div>
+      <div className={styles["pet-wrapper"]}>
+        <div className={styles["dog"]}>
+          <img
+            src="./icons/dog_icon.png"
+            alt="dog icon"
+            className={styles["dog-icon"]}
+          ></img>
+          <div className={styles["num-info"]}>
+            待領養狗狗
+            <div className={styles["num"]}>{HKSCDA_info.HKSCDA_dog.length}</div>
           </div>
         </div>
-      )}
-
-      {props.location === "Homepage" ? (
-        <ReactLink
-          to={{
-            pathname: `/Category_Page`,
-          }}
-        >
-          <div className="shortCut-outbox">
-            <div className="shortCutButton-wrapper">
-              <div className="shortCut-img">
-                <img src="./icons/cat_icon.png" width="50px" alt="kitten"></img>
-              </div>
-              <div className="shortCut-text">
-                {`待領養貓貓: ${HKSCDA_info.HKSCDA_cat.length}`}
-              </div>
-            </div>
-          </div>
-        </ReactLink>
-      ) : (
-        <div className="shortCut-outbox">
-          <div className="shortCutButton-wrapper">
-            <div className="shortCut-img">
-              <img src="./icons/cat_icon.png" width="50px" alt="kitten"></img>
-            </div>
-            <div className="shortCut-text">
-              {`待領養貓貓: ${HKSCDA_info.HKSCDA_cat.length}`}
-            </div>
+        <div className={styles["cat"]}>
+          <img
+            src="./icons/cat_icon.png"
+            alt="cat icon"
+            className={styles["cat-icon"]}
+          ></img>
+          <div className={styles["num-info"]}>
+            待領養貓貓
+            <div className={styles["num"]}>{HKSCDA_info.HKSCDA_cat.length}</div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
