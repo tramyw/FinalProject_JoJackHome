@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./AnimalList.module.css";
+import { motion } from "framer-motion";
 
 function AnimalList(props) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -50,6 +51,20 @@ function AnimalList(props) {
       return 8; // Show 8 items per page for small screens
     }
   }
+
+  const cardVariants = {
+    offscreen: {
+      y: 385,
+    },
+    onscreen: {
+      y: 130,
+
+      transition: {
+        type: "spring",
+        duration: 1,
+      },
+    },
+  };
   return (
     <div>
       <div className={styles["image-list-container"]}>
@@ -64,25 +79,50 @@ function AnimalList(props) {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <div className={styles["listItem"]}>
-                <div className={styles["image-container"]}>
+              <motion.div
+                className={styles["listItem"]}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 1 }}
+              >
+                <motion.div
+                  className={styles["image-container"]}
+                  variants={cardVariants}
+                >
                   <img
                     src={`${el.image}?w=248&fit=crop&auto=format`}
                     alt={el.name}
-                    loading="lazy"
                     className={styles["bio-image"]}
                   />
-                </div>
+                </motion.div>
 
                 <div className={styles["image-details"]}>
                   <div className={styles["bio-details-wrapper"]}>
-                    <h3 className={styles["bioName"]}>{el.name}</h3>
-                    <span className={styles["bio-gender-age"]}>
-                      {el.gender} {el.age}
-                    </span>
+                    <h3 className={styles["bioName"]}>
+                      {el.name}
+                      <h5 className={styles["bio-gender-age"]}>
+                        {el.gender === "女" ? (
+                          <img
+                            className={styles["gender-Icon"]}
+                            src="https://em-content.zobj.net/source/microsoft/379/female-sign_2640-fe0f.png"
+                          ></img>
+                        ) : (
+                          <img
+                            className={styles["gender-Icon"]}
+                            src="https://em-content.zobj.net/source/microsoft/379/male-sign_2642-fe0f.png"
+                          ></img>
+                        )}
+                        {el.age}
+                      </h5>
+                    </h3>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>
