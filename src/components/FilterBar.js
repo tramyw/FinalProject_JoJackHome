@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HKSCDA_info from "../HKSCDA_animal_info.json";
-//import HKSPCA_info from "../HKSPCA_animal_info.json";
+import HKSPCA_info from "../HKSPCA_animal_info.json";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -188,7 +188,6 @@ function FilterBar() {
             </div>
           </div>
         </div>
-
         <div className={styles["filterClearButton-wrapper"]}>
           <div className={styles["filterClearButton"]}>
             <button
