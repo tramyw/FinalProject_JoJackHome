@@ -19,8 +19,8 @@ root.render(
     {/*<Catcursor />*/}
     <Router>
       <Routes>
+        <Route exact path="/" element={<Homepage />} />
         <Route path="/Home" element={<Homepage />} />
-
         <Route path="/Adoption_Info_Page" element={<AdoptionInfoPage />} />
         <Route path="/Category_Page" element={<CategoryPage />} />
         <Route
