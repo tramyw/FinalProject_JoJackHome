@@ -5,7 +5,7 @@ import NewNavbar from "../NewNavbar";
 import Footer from "./Footer";
 import ImageG from "./ImageGallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import "../Profile.css";
+import styles from "../Profile.module.css";
 import { motion } from "framer-motion";
 
 function AnimalsProfile() {
@@ -20,7 +20,7 @@ function AnimalsProfile() {
       <NewNavbar />
       <br></br>
       <br></br>
-      <div className="content">
+      <div className={styles["content"]}>
         <ImageG data={animalInfo} />
         <motion.div animate={{ y: 50 }} transition={{ duration: 0.4 }}>
           <h1>{animalInfo[0].name}</h1>
@@ -32,12 +32,16 @@ function AnimalsProfile() {
             我現時
             {
               <em>
-                <span className="underline">{animalInfo[0].chipped}</span>
+                <span className={styles["underline"]}>
+                  {animalInfo[0].chipped}
+                </span>
               </em>
             }
             晶片, 而且
             <em>
-              <span className="underline">{animalInfo[0].castrated}</span>
+              <span className={styles["underline"]}>
+                {animalInfo[0].castrated}
+              </span>
             </em>
             ~
           </h4>
@@ -62,13 +66,15 @@ function AnimalsProfile() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 1.5 }}
-        className="adoptionButton"
+        className={styles["adoptionButton"]}
       >
         <p>狗狗準備好返屋企，你準備好未?</p>
         <h3>領養前，停一停，諗一諗</h3>
         <Stack spacing={2}>
           <a href={`${animalInfo[0].href}`}>
-            <Button variant="contained">去了解我更多</Button>
+            <Button id={styles["external-link"]} variant="contained">
+              去了解我更多
+            </Button>
           </a>
         </Stack>
       </motion.div>

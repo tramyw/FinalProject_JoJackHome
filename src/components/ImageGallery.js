@@ -1,6 +1,6 @@
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import "../Profile.css";
+import styles from "../Profile.module.css";
 
 const ImageG = (props) => {
   const images = [
@@ -14,7 +14,7 @@ const ImageG = (props) => {
     },
   ];
   return (
-    <div className="App">
+    <div className={styles["App"]}>
       <ImageGallery
         items={images}
         showPlayButton={false}
@@ -24,7 +24,7 @@ const ImageG = (props) => {
         renderItem={(item) => (
           <img
             src={item.original}
-            style={{ borderRadius: "15px", width: "65%", height: "auto" }}
+            className={styles["slider"]}
             alt={item.originalAlt}
             title={item.originalTitle}
           />

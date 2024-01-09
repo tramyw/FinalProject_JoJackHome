@@ -1,5 +1,5 @@
 import React from "react";
-import "./Profile.css";
+import styles from "./Profile.module.css";
 import NewNavbar from "./NewNavbar";
 import ImageGallery from "./components/ImageGallery";
 import Footer from "./components/Footer";
@@ -940,7 +940,7 @@ const Profile = (Props) => {
     },
   ];
   return (
-    <div className="containerA">
+    <div className={styles["containerA"]}>
       <NewNavbar />;
       <Stack direction="row" justifyContent="space-evenly" spacing={3}>
         <div>
