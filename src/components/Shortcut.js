@@ -5,7 +5,7 @@ import styles from "./Shortcut.module.css";
 function Shortcut(props) {
   return (
     <div className={styles["count-container"]}>
-      <div className={styles["title"]}>本網站目前收錄到嘅待領養主子數目：</div>
+      <div className={styles["title"]}>現時本站收錄到嘅待領養主子數目：</div>
       <div className={styles["pet-wrapper"]}>
         <div className={styles["dog"]}>
           <img

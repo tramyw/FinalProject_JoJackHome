@@ -30,7 +30,7 @@ function Navbar() {
   const responsive = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static" sx={{ background: "#f9dc5c" }}>
+    <AppBar position="static" sx={{ background: "#F0FFCE" }}>
       <Toolbar>
         <Link to={{ pathname: `/Home` }} style={{ textDecoration: "none" }}>
           <Box
@@ -39,7 +39,7 @@ function Navbar() {
             m1={2}
             component="img"
             sx={{
-              height: 45,
+              height: 50,
               display: "flex",
               justifyContent: "centre",
               alignItems: "center",
@@ -61,7 +61,7 @@ function Navbar() {
               display: { md: "flex" },
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "#584D3D",
+              color: "#A53F2B",
               textDecoration: "none",
             }}
           >

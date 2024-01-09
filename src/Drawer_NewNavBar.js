@@ -39,7 +39,7 @@ const Drawercomp = () => {
                   key={Object.values(page)}
                   to={`/${Object.values(page)}`}
                 >
-                  <ListItemText sx={{ color: "#508FF7" }}>
+                  <ListItemText sx={{ color: "#A53F2B" }}>
                     {Object.keys(page)}
                   </ListItemText>
                 </Link>
@@ -53,7 +53,7 @@ const Drawercomp = () => {
                   href={`${Object.values(navbtn)}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <ListItemText sx={{ color: "#508FF7" }}>
+                  <ListItemText sx={{ color: "#A53F2B" }}>
                     {Object.keys(navbtn)}
                   </ListItemText>
                 </a>
@@ -66,7 +66,7 @@ const Drawercomp = () => {
         sx={{ color: "white", marginLeft: "auto" }}
         onClick={() => setopenDrawer(!openDrawer)}
       >
-        <MenuTwoToneIcon sx={{ color: "#E8B338" }} />
+        <MenuTwoToneIcon sx={{ color: "#A53F2B" }} />
       </IconButton>
     </React.Fragment>
   );
