@@ -9,7 +9,6 @@ const AboutUs = () => {
   return (
     <div className="container">
       <NewNavbar />
-
       <div className={styles["middle-content"]}>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -88,31 +87,32 @@ const AboutUs = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div>
-          <h2 className={styles["contact-Title"]}>聯絡我們</h2>
-        </div>
-        <div>
-          <img
-            className={styles["contact-Image"]}
-            src="https://images.unsplash.com/photo-1516007049085-2a9077b4b512?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Contact Us"
-          />
-        </div>
-        <div>
-          <div className={styles["contact-Us"]}>
-            <span className={styles["contact-Info"]}>
-              <span className={styles["contact-Details"]}>電話：3500 7164</span>{" "}
-            </span>
-            <p className={styles["contact-Info"]}>
-              <span className={styles["contact-Details"]}>
-                一般查詢： generationhk@generation.org
+        <div className={styles["contactUs-info-bg"]}>
+          <div className={styles["contact-Title"]}>聯絡我們</div>
+          <div className={styles["contact-container"]}>
+            <img
+              className={styles["contact-Image"]}
+              src="./Imgs/cat-and-dog.svg"
+              alt="Contact Us"
+            />
+
+            <div className={styles["contact-Us"]}>
+              <span className={styles["contact-Info"]}>
+                <span className={styles["contact-Details"]}>
+                  電話：3500 7164
+                </span>{" "}
               </span>
-            </p>
-            <span className={styles["contact-Info"]}>
-              <span className={styles["contact-Details"]}>
-                領養/走失查詢： communicationhk@generation.org
+              <p className={styles["contact-Info"]}>
+                <span className={styles["contact-Details"]}>
+                  一般查詢： generationhk@generation.org
+                </span>
+              </p>
+              <span className={styles["contact-Info"]}>
+                <span className={styles["contact-Details"]}>
+                  領養/走失查詢： communicationhk@generation.org
+                </span>
               </span>
-            </span>
+            </div>
           </div>
         </div>
       </motion.div>
