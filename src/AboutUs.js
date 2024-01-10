@@ -99,19 +99,24 @@ const AboutUs = () => {
             <div className={styles["contact-Us"]}>
               <span className={styles["contact-Info"]}>
                 <span className={styles["contact-Details"]}>
+                  <img
+                    src="./icons/phone.png"
+                    alt="phone"
+                    className={styles["contactUsIcon"]}
+                  />
                   電話：3500 7164
-                </span>{" "}
+                </span>
               </span>
               <p className={styles["contact-Info"]}>
                 <span className={styles["contact-Details"]}>
-                  一般查詢： generationhk@generation.org
+                  <img
+                    src="./icons/email.png"
+                    alt="email"
+                    className={styles["contactUsIcon"]}
+                  />
+                  電郵： jojac.home.official@gmail.com
                 </span>
               </p>
-              <span className={styles["contact-Info"]}>
-                <span className={styles["contact-Details"]}>
-                  領養/走失查詢： communicationhk@generation.org
-                </span>
-              </span>
             </div>
           </div>
         </div>

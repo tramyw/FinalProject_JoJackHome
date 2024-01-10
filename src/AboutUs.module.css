@@ -113,6 +113,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.contactUsIcon {
+  width: 20px;
+  padding-right: 10px;
+}
 .contact-Image {
   height: 200px;
 }
@@ -121,6 +126,8 @@
 }
 .contact-Details {
   font-weight: 800;
+  display: flex;
+  align-content: center;
 }
 
 @media (min-width: 1280px) {
