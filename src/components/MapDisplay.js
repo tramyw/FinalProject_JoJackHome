@@ -64,9 +64,9 @@ function MapDisplay() {
       gender: "男仔",
       age: "4歲",
       phone: 21800000,
-      characteristics: " 藍色珠鏈",
+      characteristics: "鍾意食炸雞同薯條",
       lost_location: "8月30日 晚上10:30在大坪走失, $2000 REWARD薄酬",
-      src: "https://i.redd.it/6gf7xrn1dxk61.jpg",
+      src: "./Imgs/jack.png",
     },
   ];
   function ImgaePopUp({
