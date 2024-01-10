@@ -54,7 +54,7 @@ function AnimalList(props) {
       return 8; // Show 8 items per page for small screens
     }
   }
-
+  //hi
   const cardVariants = {
     offscreen: {
       y: -40,
