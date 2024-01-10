@@ -5,6 +5,7 @@ import Footer from "./components/Footer.js";
 import Shortcut from "./components/Shortcut.js";
 import StarPet from "./components/StarPet.js";
 import MapButtons from "./components/MapButtons.js";
+import AdoptionCalendar from "./components/Calendar.js";
 //import Catcursor from "./catcursor.js";
 //import Dogcursor from "./dogcursor.js";
 //import Jojaccursor from "./jojaccursor.js";
@@ -18,7 +19,8 @@ function Homepage() {
       {/*<Banner />*/}
 
       {/* <Catcursor /> */}
-      <Shortcut location="Homepage" />
+      <Shortcut />
+      <AdoptionCalendar />
       <MapButtons />
       <MapDisplay />
       <Footer />
