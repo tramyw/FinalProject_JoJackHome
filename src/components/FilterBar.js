@@ -51,7 +51,9 @@ function FilterBar() {
             el.chipped === "/"
           : el.chipped === selectedChip) &&
         (selectedCastrated === "all"
-          ? el.castrated === "未絕育" || el.castrated === "已絕育"
+          ? el.castrated === "未絕育" ||
+            el.castrated === "已絕育" ||
+            el.castrated === "/"
           : el.castrated === selectedCastrated)
       );
     });
@@ -182,6 +184,9 @@ function FilterBar() {
                   </MenuItem>
                   <MenuItem value="已絕育" className={styles["option"]}>
                     已絕育
+                  </MenuItem>
+                  <MenuItem value="/" className={styles["option"]}>
+                    未知
                   </MenuItem>
                 </Select>
               </FormControl>
