@@ -52,11 +52,10 @@ function AdoptionCalendar() {
   };
 
   return (
-    <div>
-      <h2 className={styles["calendarTitle"]}>
-        唔想網上交友? <br></br>可以來偶遇一下主子<br></br>
-        {`(${value.getMonth() + 1}月至${value.getMonth() + 2}月時間表)`}
-      </h2>
+    <div className={styles["calendar-section"]}>
+      <div className={styles["calendarTitle"]}>
+        唔想網上交友？可以來偶遇一下主子🐈
+      </div>
       <div className={styles["calanderPlusDetailsWrapper"]}>
         <div className={styles["calanderPlusDetails"]}>
           <Calendar
@@ -69,6 +68,9 @@ function AdoptionCalendar() {
         </div>
         <div>
           <div className={styles["calendarDetailsWrapper"]}>
+            <div className={styles["calendar-month"]}>
+              {`${value.getMonth() + 1}月至${value.getMonth() + 2}月時間表`}
+            </div>
             {filteredEvents.map((el, index) => (
               <div key={index} className={styles["calendarDetails"]}>
                 <span className={styles["eventLocation"]}>
