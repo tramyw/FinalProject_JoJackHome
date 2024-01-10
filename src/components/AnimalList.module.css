@@ -18,11 +18,13 @@
 
 .bio-image {
   width: 210px;
-  max-height: 290px;
+  max-height: 250px;
+  min-height: 200px;
   object-fit: cover;
   border-radius: 30px;
   filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.3));
   position: relative;
+  overflow: hidden;
 }
 
 .image-details {
@@ -85,4 +87,22 @@
 .motion-button {
   border: none;
   background-color: unset;
+}
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.page-item {
+  background-color: white;
+  border: transparent;
+  font-size: 1.3rem;
+}
+
+.page-item:hover {
+  background-color: yellow;
 }

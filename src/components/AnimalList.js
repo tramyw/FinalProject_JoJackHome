@@ -23,20 +23,23 @@ function AnimalList(props) {
     };
   }, []);
 
-  //console.log(props.data);
+  console.log(props.data);
 
   function previousPage() {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 
   function changeCurrentPage(chosenPage) {
     setCurrentPage(chosenPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function nextPage() {
     if (currentPage !== pageNum.length) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setCurrentPage(currentPage + 1);
     }
   }
@@ -54,10 +57,10 @@ function AnimalList(props) {
 
   const cardVariants = {
     offscreen: {
-      y: 385,
+      y: -40,
     },
     onscreen: {
-      y: 130,
+      y: -75,
 
       transition: {
         type: "spring",
@@ -79,23 +82,24 @@ function AnimalList(props) {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <div className={styles["image-wrapper"]}>
+              <div className={styles["image-wrapper"]} key={el.name}>
                 <motion.div
-                  animate={{ y: [-50, -80, -70] }}
-                  transition={{ ease: "easeOut", duration: 2 }}
+                //animate={{ y: [-50, -80, -70] }}
+                //variants={cardVariants}
+                //transition={{ ease: "easeOut", duration: 2 }}
                 >
                   <motion.button
                     className={styles["motion-button"]}
                     variants={cardVariants}
-                    initial={{ opacity: 0.6 }}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.8 }}
                     whileHover={{
-                      // y: 0,
-                      scale: 1.1,
-
+                      y: -89,
+                      scale: 1,
                       transition: { duration: 1 },
                     }}
                     whileTap={{ scale: 0.9 }}
-                    whileInView={{ opacity: 1 }}
                   >
                     <img
                       src={`${el.image}?w=248&fit=crop&auto=format`}
@@ -139,23 +143,11 @@ function AnimalList(props) {
         </div>
       </div>
       <nav>
-        <ul
-          className="pagination"
-          style={{
-            display: "flex",
-            listStyleType: "none",
-            justifyContent: "space-around",
-          }}
-        >
-          <li className="page-item">
-            <a
-              href="#"
-              className="page-item"
-              onClick={previousPage}
-              style={{ textDecoration: "none" }}
-            >
+        <ul className={styles["pagination"]}>
+          <li className={styles["page-item"]}>
+            <button className={styles["page-item"]} onClick={previousPage}>
               {currentPage === 1 || numberOfPages === 0 ? "  " : "🐕⏪"}
-            </a>
+            </button>
           </li>
 
           {pageNum.map((eachAnimal, index) => (
@@ -166,28 +158,21 @@ function AnimalList(props) {
                 }`}
                 key={index}
               >
-                <a
-                  href="#"
-                  className="page-item"
+                <button
+                  className={styles["page-item"]}
                   onClick={() => changeCurrentPage(eachAnimal)}
-                  style={{ textDecoration: "none" }}
                 >
                   {eachAnimal}
-                </a>
+                </button>
               </li>
             </div>
           ))}
-          <li className="page-item">
-            <a
-              href="#"
-              className="page-item"
-              onClick={nextPage}
-              style={{ textDecoration: "none" }}
-            >
+          <li className={styles["page-item"]}>
+            <button className={styles["page-item"]} onClick={nextPage}>
               {currentPage === pageNum.length || numberOfPages === 0
                 ? "  "
                 : "⏩🐈"}
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
