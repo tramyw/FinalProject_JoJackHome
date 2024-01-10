@@ -2,7 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import iconUrl from "../arrow.png";
+import iconUrl from "../dog_1049342.svg";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 import styles from "./MapDisplay.module.css";
 
@@ -51,9 +51,9 @@ function MapDisplay() {
       gender: "男仔",
       age: "4歲",
       phone: 21800000,
-      characteristics: " 無頸帶, 長尾, 四隻腳都係白襪",
+      characteristics: "無頸帶, 長尾, 四隻腳都係白襪, 識得講人話",
       lost_location: "係西環邨西苑台走失",
-      src: "https://assets-metrostyle.abs-cbn.com/prod/metrostyle/attachments/e0ca6539-d432-4177-a385-7b0259ca0041_z%20giant%20poodles%202.jpg",
+      src: "./Imgs/jo2.png",
     },
     {
       position: [22.363371806063473, 114.13241922855379],
@@ -64,8 +64,8 @@ function MapDisplay() {
       gender: "男仔",
       age: "4歲",
       phone: 21800000,
-      characteristics: "鍾意食炸雞同薯條",
-      lost_location: "8月30日 晚上10:30在大坪走失, $2000 REWARD薄酬",
+      characteristics: "鍾意食炸雞同薯條, 腰痛, 常在海邊出没",
+      lost_location: "1月10日 1:30pm 在大浪灣走失, $2000 薄酬",
       src: "./Imgs/jack.png",
     },
   ];
