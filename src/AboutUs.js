@@ -3,6 +3,7 @@ import NewNavbar from "./NewNavbar";
 import Footer from "./components/Footer";
 import styles from "./AboutUs.module.css";
 import { motion } from "framer-motion";
+import NGOLogo from "./components/NGOLogo";
 
 const AboutUs = () => {
   return (
@@ -79,46 +80,7 @@ const AboutUs = () => {
         transition={{ duration: 0.5 }}
         className={styles["logocontainer"]}
       >
-        <div className={styles["allLogos"]}>
-          <a
-            href="https://hkscda.com/adoption/instructions"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./icons/HKSCDA_logo.jpeg" className="logo" alt="HKSCDA" />
-          </a>
-          <a
-            href="https://www.spca.org.hk/zh-hant/what-we-do/adoption/adoption-process/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./icons/HKSPCA_logo.jpeg" className="logo" alt="HKSPCA" />
-          </a>
-
-          <a
-            href="https://www.hk-aac.org.hk/image/data/pdf/dogs.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./icons/HKAAC_logo.jpeg" className="logo" alt="HKAAC" />
-          </a>
-
-          <a
-            href="https://drive.google.com/file/d/18i9IPSWbWwd1Jypv3uaN4T5wnualOCRB/view"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./icons/LAP_logo.jpeg" className="logo" alt="LAP" />
-          </a>
-
-          <a
-            href="https://www.saa.org.hk/zh/service.php?id=1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./icons/SAA_logo.jpeg" className="logo" alt="SAA" />
-          </a>
-        </div>
+        <NGOLogo />
       </motion.div>
       <motion.div
         className={styles["contactUs-wrapper"]}
