@@ -146,7 +146,7 @@ function AnimalList(props) {
         <ul className={styles["pagination"]}>
           <li className={styles["page-item"]}>
             <button className={styles["page-item"]} onClick={previousPage}>
-              {currentPage === 1 || numberOfPages === 0 ? "  " : "🐕⏪"}
+              {currentPage === 1 || numberOfPages === 0 ? "  " : "🐕 ⏪"}
             </button>
           </li>
 
@@ -171,7 +171,7 @@ function AnimalList(props) {
             <button className={styles["page-item"]} onClick={nextPage}>
               {currentPage === pageNum.length || numberOfPages === 0
                 ? "  "
-                : "⏩🐈"}
+                : "⏩ 🐈"}
             </button>
           </li>
         </ul>
