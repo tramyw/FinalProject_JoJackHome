@@ -1,3 +1,18 @@
+#LOGO-subheading {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#subheading-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+}
+
 .LOGO-wrapper {
   display: flex;
   justify-content: space-evenly;

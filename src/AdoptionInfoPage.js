@@ -12,7 +12,7 @@ function AdoptionInfoPage() {
       <NewNavbar />
       <div id={styles["infocontainer"]}>
         <div className={styles["bg-wrapper"]}>
-          <div className={styles["headingcontainer"]}>
+          <div id={styles["headingcontainer"]}>
             <p className={styles["Info-heading"]}>基本領養需知</p>
           </div>
           <div className={styles["Info-content"]}>

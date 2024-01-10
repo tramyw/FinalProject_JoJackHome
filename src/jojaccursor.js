@@ -5,7 +5,9 @@ function Jojaccursor() {
   const trailElementsRef = useRef([]);
   const [mouse, setMouse] = useState({ x: 100, y: 100 });
   const drag = [0.35, 0.3, 0.25, 0.2];
-
+  useEffect(() => {
+    console.log(trailElementsRef.current);
+  }, [trailElementsRef]);
   useEffect(() => {
     const trailElements = trailElementsRef.current;
 
@@ -21,6 +23,14 @@ function Jojaccursor() {
     }
 
     function loop(trailElement, i) {
+      // let x, y;
+      // if (trailElement) {
+      //   x = parseFloat(trailElement.style.left);
+      //   y = parseFloat(trailElement.style.top);
+      // } else {
+      //   x = 0;
+      //   y = 0;
+      // }
       let x = parseFloat(trailElement.style.left) || 0;
       let y = parseFloat(trailElement.style.top) || 0;
 
@@ -60,6 +70,8 @@ function Jojaccursor() {
       document.removeEventListener("mousemove", updateMouseLocations);
     };
   }, [mouse]);
+
+  console.log(trailElementsRef.current);
 
   return (
     <div className="trailContainer">

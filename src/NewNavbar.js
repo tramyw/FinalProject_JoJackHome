@@ -28,7 +28,7 @@ function Navbar() {
   const [value, setValue] = useState();
   const theme = useTheme();
   const responsive = useMediaQuery(theme.breakpoints.down("md"));
-
+  console.log(pages);
   return (
     <AppBar position="static" sx={{ background: "#F0FFCE" }}>
       <Toolbar>
@@ -79,7 +79,7 @@ function Navbar() {
               {pages.map((page, index) => (
                 <Link
                   style={{ textDecoration: "none" }}
-                  key={Object.values(page)}
+                  key={index}
                   to={`/${Object.values(page)}`}
                 >
                   <Tab

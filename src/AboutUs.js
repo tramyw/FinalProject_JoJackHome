@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import styles from "./AboutUs.module.css";
 import { motion } from "framer-motion";
 import NGOLogo from "./components/NGOLogo";
-
 const AboutUs = () => {
   return (
     <div className="container">
