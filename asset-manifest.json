@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/final_jojackhome/static/css/main.2c922242.css",
-    "main.js": "/final_jojackhome/static/js/main.0c812860.js",
-    "static/js/787.cc633b69.chunk.js": "/final_jojackhome/static/js/787.cc633b69.chunk.js",
-    "static/media/star-bg.png": "/final_jojackhome/static/media/star-bg.9d03ba5d52f0964c1ef8.png",
-    "static/media/adoptionpagebg.png": "/final_jojackhome/static/media/adoptionpagebg.25c3a029f4e35db661ef.png",
-    "static/media/cat.png": "/final_jojackhome/static/media/cat.57ea2a4fc2dbf317c0c4.png",
-    "static/media/jojachomelogo.png": "/final_jojackhome/static/media/jojachomelogo.95c8bb511b118938e36a.png",
-    "static/media/dog_1049342.svg": "/final_jojackhome/static/media/dog_1049342.53cfe40e2c8780c37962c964bfc96b5d.svg",
-    "static/media/Outline_jojachome.png": "/final_jojackhome/static/media/Outline_jojachome.a4aed397c7df99daa9c8.png",
-    "static/media/FB.svg": "/final_jojackhome/static/media/FB.65bb306e1cd8e0237ceceac67d1ee8de.svg",
-    "index.html": "/final_jojackhome/index.html",
-    "static/media/IG.svg": "/final_jojackhome/static/media/IG.a63c9476fa83b33ffc32894544c5ccb7.svg",
-    "static/media/X.svg": "/final_jojackhome/static/media/X.8f8dd8b68ebd953e9501d7b63112e23f.svg",
-    "main.2c922242.css.map": "/final_jojackhome/static/css/main.2c922242.css.map",
-    "main.0c812860.js.map": "/final_jojackhome/static/js/main.0c812860.js.map",
-    "787.cc633b69.chunk.js.map": "/final_jojackhome/static/js/787.cc633b69.chunk.js.map"
+    "main.css": "/FinalProject_JoJackHome/static/css/main.f048ba80.css",
+    "main.js": "/FinalProject_JoJackHome/static/js/main.629d1fb4.js",
+    "static/js/787.cc633b69.chunk.js": "/FinalProject_JoJackHome/static/js/787.cc633b69.chunk.js",
+    "static/media/star-bg.png": "/FinalProject_JoJackHome/static/media/star-bg.9d03ba5d52f0964c1ef8.png",
+    "static/media/adoptionpagebg.png": "/FinalProject_JoJackHome/static/media/adoptionpagebg.25c3a029f4e35db661ef.png",
+    "static/media/cat.png": "/FinalProject_JoJackHome/static/media/cat.57ea2a4fc2dbf317c0c4.png",
+    "static/media/jojachomelogo.png": "/FinalProject_JoJackHome/static/media/jojachomelogo.95c8bb511b118938e36a.png",
+    "static/media/dog_1049342.svg": "/FinalProject_JoJackHome/static/media/dog_1049342.53cfe40e2c8780c37962c964bfc96b5d.svg",
+    "static/media/Outline_jojachome.png": "/FinalProject_JoJackHome/static/media/Outline_jojachome.a4aed397c7df99daa9c8.png",
+    "static/media/FB.svg": "/FinalProject_JoJackHome/static/media/FB.65bb306e1cd8e0237ceceac67d1ee8de.svg",
+    "index.html": "/FinalProject_JoJackHome/index.html",
+    "static/media/IG.svg": "/FinalProject_JoJackHome/static/media/IG.a63c9476fa83b33ffc32894544c5ccb7.svg",
+    "static/media/X.svg": "/FinalProject_JoJackHome/static/media/X.8f8dd8b68ebd953e9501d7b63112e23f.svg",
+    "main.f048ba80.css.map": "/FinalProject_JoJackHome/static/css/main.f048ba80.css.map",
+    "main.629d1fb4.js.map": "/FinalProject_JoJackHome/static/js/main.629d1fb4.js.map",
+    "787.cc633b69.chunk.js.map": "/FinalProject_JoJackHome/static/js/787.cc633b69.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c922242.css",
-    "static/js/main.0c812860.js"
+    "static/css/main.f048ba80.css",
+    "static/js/main.629d1fb4.js"
   ]
 }
