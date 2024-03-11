@@ -1,16 +1,6 @@
 {
   "HKSCDA_dog": [
     {
-      "name": "冬蟲",
-      "gender": "女",
-      "age": "3個月",
-      "chipped": "/",
-      "castrated": "/",
-      "href": "https://www.hkscda.com/animal/id/3837",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/tpxuqLDl3LKOFSuppQQQK3Www56sZK595C7zTuob.jpeg",
-      "species": "dog"
-    },
-    {
       "name": "夏草",
       "gender": "女",
       "age": "3個月",
@@ -128,16 +118,6 @@
       "castrated": "未絕育",
       "href": "https://www.hkscda.com/animal/id/3683",
       "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/rxF7JRvEYPinvysEQl5luunM1hnsFeTumjnNeq9I.jpeg",
-      "species": "dog"
-    },
-    {
-      "name": "VOLVO",
-      "gender": "女",
-      "age": "5個月",
-      "chipped": "未植入",
-      "castrated": "未絕育",
-      "href": "https://www.hkscda.com/animal/id/3675",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/UDryrR17PvWgjtnh5HhXSeCEB3HqkLpLM1SalRMm.jpeg",
       "species": "dog"
     },
     {
@@ -403,36 +383,6 @@
       "species": "cat"
     },
     {
-      "name": "黑妹",
-      "gender": "女",
-      "age": "6個月",
-      "chipped": "/",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3842",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/ecssVVLXA5P850ZRy84KQBCuhBeVnreVUMF8sjL9.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "BEVIA",
-      "gender": "女",
-      "age": "1歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3839",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/Onq9mfK0ojLmM4H55xuDyaGjdXKQAkzSMwZEupBE.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "BEVERLY",
-      "gender": "女",
-      "age": "1歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3838",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/8wJnkPNHMv5bXGTNtv8Ya2Uo3T3gMplaYGBcMsZI.jpeg",
-      "species": "cat"
-    },
-    {
       "name": "唐雪雪",
       "gender": "女",
       "age": "2個月",
@@ -513,36 +463,6 @@
       "species": "cat"
     },
     {
-      "name": "古小春",
-      "gender": "男",
-      "age": "3個月",
-      "chipped": "未植入",
-      "castrated": "未絕育",
-      "href": "https://www.hkscda.com/animal/id/3819",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/fBO4sBWplRbN4yhft2Dd7xPf5z4MjOBPCEQpbmSy.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "古莎莉",
-      "gender": "女",
-      "age": "5個月",
-      "chipped": "未植入",
-      "castrated": "未絕育",
-      "href": "https://www.hkscda.com/animal/id/3815",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/mtVQ1tOIFCUNblIo3LTeJMMZk2MVFQkrTnDfEv3w.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "秋天",
-      "gender": "女",
-      "age": "1歲",
-      "chipped": "/",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3813",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/RX06kMq7k9HtZsCXHW6SDWS3iNoNkTOCALea02gB.jpeg",
-      "species": "cat"
-    },
-    {
       "name": "秋臘",
       "gender": "男",
       "age": "1歲",
@@ -613,16 +533,6 @@
       "species": "cat"
     },
     {
-      "name": "泡菜",
-      "gender": "女",
-      "age": "3個月",
-      "chipped": "未植入",
-      "castrated": "未絕育",
-      "href": "https://www.hkscda.com/animal/id/3741",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/OCHNRqp532JkV3O8DAZqTH3VjMJ7a9NGKuwfRrwH.jpeg",
-      "species": "cat"
-    },
-    {
       "name": "比比",
       "gender": "女",
       "age": "1歲",
@@ -653,16 +563,6 @@
       "species": "cat"
     },
     {
-      "name": "古公子",
-      "gender": "男",
-      "age": "3歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3629",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/zWehqPk6wg8USESnRFbDAh6SidcTwOaM6oWaNQ9x.jpeg",
-      "species": "cat"
-    },
-    {
       "name": "元舞",
       "gender": "女",
       "age": "1歲",
@@ -670,16 +570,6 @@
       "castrated": "已絕育",
       "href": "https://www.hkscda.com/animal/id/3599",
       "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/ywrO2DlcrChcxIYlSlhSUqckUdLCIgtHkA3DJxdE.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "金莎糖",
-      "gender": "男",
-      "age": "6個月",
-      "chipped": "未植入",
-      "castrated": "未絕育",
-      "href": "https://www.hkscda.com/animal/id/3598",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/A7dZw4mhLMF3NnvwjOncsJA5GH2qQMurLxacWYAG.jpeg",
       "species": "cat"
     },
     {
@@ -763,16 +653,6 @@
       "species": "cat"
     },
     {
-      "name": "高妙思",
-      "gender": "女",
-      "age": "1歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3264",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/jR5j3vVnHDCUv2jOnQXSsKNP5rvZ3o9gXDQfayWw.jpeg",
-      "species": "cat"
-    },
-    {
       "name": "美味米",
       "gender": "男",
       "age": "3歲",
@@ -780,26 +660,6 @@
       "castrated": "已絕育",
       "href": "https://www.hkscda.com/animal/id/3260",
       "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/Px1AGnn35l9YSthQIfP3aUhvBixPznko3WxYXoPC.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "乖乖",
-      "gender": "男",
-      "age": "1歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3259",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/oC1vDnxu6o5YsgwopSnucifn40u4URRbG8etS5xs.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "淺淺",
-      "gender": "男",
-      "age": "2歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3240",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/y4utVIxodOB1WHcgMwFi5jN3dT1ARLKNmkwjJsXh.jpeg",
       "species": "cat"
     },
     {
@@ -840,16 +700,6 @@
       "castrated": "已絕育",
       "href": "https://www.hkscda.com/animal/id/3114",
       "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/XFkgbmX06kyCfdi6OkQSjpgaqZFvHryMAOUHGmtY.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "JUMP",
-      "gender": "男",
-      "age": "4歲",
-      "chipped": "未植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/3025",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/7tRjsYwM9OkTLWi5KxSBtf41H0pcARh1M7ZcXaQr.jpeg",
       "species": "cat"
     },
     {
@@ -920,16 +770,6 @@
       "castrated": "已絕育",
       "href": "https://www.hkscda.com/animal/id/2665",
       "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/jy2m2cpWkLuxY9E8BMEeN3PEU0Ggn8kUU4kIvc3o.jpeg",
-      "species": "cat"
-    },
-    {
-      "name": "OMAR",
-      "gender": "男",
-      "age": "5歲",
-      "chipped": "已植入",
-      "castrated": "已絕育",
-      "href": "https://www.hkscda.com/animal/id/1715",
-      "image": "https://www.hkscda.com/HKSCDA/storage/app/public/animals/gQBnXnCxWQLpWDXwFdPcqyiNgvzm82w6usXgwZe5.jpeg",
       "species": "cat"
     }
   ]

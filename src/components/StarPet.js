@@ -10,33 +10,21 @@ function StarPet() {
   //   console.log(petsData);
   const catData = petsData.HKSCDA_cat;
   const dogData = petsData.HKSCDA_dog;
-  const species = [catData, dogData];
+  const species = [...catData, ...dogData];
 
   // Function to select a random species from the JSON data
-  const getRandomSpecies = () => {
+  const getRandomPet = () => {
     const optionRandomIndex = Math.floor(Math.random() * species.length);
-    const petRandomIndex = Math.floor(
-      Math.random() * species[optionRandomIndex].length
-    );
-    const selectedPet = species[optionRandomIndex][petRandomIndex];
-    return selectedPet;
+    return species[optionRandomIndex];
   };
-  //   const petStar = getRandomSpecies;
-  //   console.log(petStar());
 
   const petStar = () => {
-    const randomPet = getRandomSpecies();
+    const randomPet = getRandomPet();
     setSelectedPet(randomPet);
   };
-  // Use useEffect to update the pet daily
+  // Use useEffect to update the pet data
   useEffect(() => {
     petStar();
-
-    // Set an interval to update daily (86400000 milliseconds = 1 day)
-    const intervalId = setInterval(petStar, 86400000);
-
-    // Clear the interval on component unmount
-    return () => clearInterval(intervalId);
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (

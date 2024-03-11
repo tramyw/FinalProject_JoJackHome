@@ -25,8 +25,8 @@ function AnimalsProfile() {
         <motion.div animate={{ y: 50 }} transition={{ duration: 0.4 }}>
           <h1>{animalInfo[0].name}</h1>
           <h4>
-            我係{animalInfo[0].gender}仔 {animalInfo[0].specis}, 我的歲數是{" "}
-            {animalInfo[0].age}
+            我係{animalInfo[0].gender}仔 {animalInfo[0].species}, 我
+            {animalInfo[0].age}大啦～
           </h4>
           <h4>
             我現時

@@ -16,15 +16,24 @@ function AnimalList(props) {
     function handleResize() {
       setItemPerPage(calculateItemsPerPage());
     }
-
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  console.log(props.data);
+  function calculateItemsPerPage() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1280) {
+      return 16; // Show 16 items per page for large screens
+    } else if (screenWidth >= 960) {
+      return 12; // Show 12 items per page for medium screens
+    } else {
+      return 8; // Show 8 items per page for small screens
+    }
+  }
 
+  // Pagination motion effect
   function previousPage() {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
@@ -44,17 +53,7 @@ function AnimalList(props) {
     }
   }
 
-  function calculateItemsPerPage() {
-    const screenWidth = window.innerWidth;
-    if (screenWidth >= 1280) {
-      return 16; // Show 16 items per page for large screens
-    } else if (screenWidth >= 960) {
-      return 12; // Show 12 items per page for medium screens
-    } else {
-      return 8; // Show 8 items per page for small screens
-    }
-  }
-  //hi
+  // Hover effect
   const cardVariants = {
     offscreen: {
       y: -40,
@@ -68,6 +67,7 @@ function AnimalList(props) {
       },
     },
   };
+
   return (
     <div>
       <div className={styles["image-list-container"]}>
@@ -82,12 +82,8 @@ function AnimalList(props) {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <div className={styles["image-wrapper"]} key={el.name}>
-                <motion.div
-                //animate={{ y: [-50, -80, -70] }}
-                //variants={cardVariants}
-                //transition={{ ease: "easeOut", duration: 2 }}
-                >
+              <div className={styles["image-wrapper"]}>
+                <motion.div>
                   <motion.button
                     className={styles["motion-button"]}
                     variants={cardVariants}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import HKSCDA_info from "../HKSCDA_animal_info.json";
-// import HKSPCA_info from "../HKSPCA_animal_info.json";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -39,22 +38,10 @@ function FilterBar() {
   const handleFilterOnClick = () => {
     const newFilteredList = unfilteredInfo.filter((el) => {
       return (
-        (selectedSpecies === "all"
-          ? el.species === "dog" || el.species === "cat"
-          : el.species === selectedSpecies) &&
-        (selectedGender === "all"
-          ? el.gender === "女" || el.gender === "男"
-          : el.gender === selectedGender) &&
-        (selectedChip === "all"
-          ? el.chipped === "未植入" ||
-            el.chipped === "已植入" ||
-            el.chipped === "/"
-          : el.chipped === selectedChip) &&
-        (selectedCastrated === "all"
-          ? el.castrated === "未絕育" ||
-            el.castrated === "已絕育" ||
-            el.castrated === "/"
-          : el.castrated === selectedCastrated)
+        (selectedSpecies === "all" || selectedSpecies === el.species) &&
+        (selectedGender === "all" || selectedGender === el.gender) &&
+        (selectedChip === "all" || selectedChip === el.chipped) &&
+        (selectedCastrated === "all" || selectedCastrated === el.castrated)
       );
     });
     setFilteredList(newFilteredList);
